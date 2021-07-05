@@ -40,7 +40,7 @@ public class Server implements MqttCallback {
 	app.get("/test",ctx -> {
 	
 		CloseableHttpClient httpClient = HttpClients.createDefault();
-                HttpGet request = new HttpGet("https://web-ahk.herokuapp.com/termometro/32");
+                HttpGet request = new HttpGet("https://vmartorellitest.herokuapp.com/termometro/32");
                 System.out.println(httpClient.execute(request).getEntity().toString());
                 
 	});
@@ -68,8 +68,8 @@ public class Server implements MqttCallback {
             this.client = new MqttClient(brokerUrl, clientId, persistence);
             System.out.println("Starting: " + clientId);
             MqttConnectOptions connOpts = new MqttConnectOptions();
-            connOpts.setUserName("eze");
-            connOpts.setPassword("123".toCharArray());
+            connOpts.setUserName("test");
+            connOpts.setPassword("123123".toCharArray());
             connOpts.setCleanSession(true);
             System.out.println("checking");
             System.out.println("Mqtt Connecting to broker: " + brokerUrl);
