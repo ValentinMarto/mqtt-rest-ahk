@@ -36,7 +36,7 @@ public class Server implements MqttCallback {
                 mqttServ.setTempActual(temp);
 		ctx.result("temometro actualizado: " + mqttServ.getTempActual());
 		CloseableHttpClient httpClient = HttpClients.createDefault();
-                HttpGet request = new HttpGet("https://vmartorellitest.herokuapp.com/termometro/32");
+                HttpGet request = new HttpGet("https://maker.ifttt.com/trigger/test/with/key/nDbOSkhxVzLfXaU7Q1MAqMqa-BwQ8-szXJhumf7f31D");
 	}
 	);
 	app.get("/test",ctx -> {
